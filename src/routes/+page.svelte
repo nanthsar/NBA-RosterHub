@@ -3,7 +3,7 @@
 <h3>
   NBA RosterHub – der smarte
   <a href="/teams">Kader-Manager</a>
-  für die Basketballwelt.
+  für die Basketballwelt!
 </h3>
 
 <img src="/images/ChatGPT_NBA_Banner.png" alt="" class="banner" />
