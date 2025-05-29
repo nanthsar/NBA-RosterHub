@@ -1,0 +1,112 @@
+body {
+  background-color: lightgray;
+  color: black;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+  display: block;
+  margin-bottom: 0;
+}
+
+.nba-logo {
+  height: 60px;
+  width: auto;
+}
+
+
+
+.banner {
+  zoom: 100%;
+  width: 1000px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+table,
+th,
+td {
+  border: 1px solid white;
+}
+
+.movie-grid {
+  border-radius: 5px;
+  border-color: aliceblue;
+  padding: 0 10rem;
+}
+
+h3 {
+  font-style: italic;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.movie-item {
+  border: 1px solid grey;
+}
+
+.movie-information {
+  background-color: dimgrey;
+  padding: 0.5rem;
+  margin-top: 0;
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.adding {
+  text-align: center;
+}
+
+.details {
+  margin-top: 2rem;
+  padding: 0 10rem;
+}
+
+.details-poster {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.details-poster img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.details-text {
+  max-width: 600px;
+}
+
+button {
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+a {
+  color: #0C2340;
+}
