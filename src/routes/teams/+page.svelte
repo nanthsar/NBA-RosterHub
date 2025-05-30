@@ -1,12 +1,11 @@
 <script>
     let { data } = $props();
-
     let teams = data.teams;
 </script>
 
 <br />
 <div class="adding">
-    <a href="/teams/create">+add Team</a>
+    <a href="/teams/create">+Add a new team</a>
     <br />
     <br />
 </div>

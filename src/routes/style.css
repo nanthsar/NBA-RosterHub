@@ -80,18 +80,18 @@ h3 {
   padding: 0 10rem;
 }
 
-.details-poster {
+.details-logo {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
   margin-top: 1rem;
 }
 
-.details-poster img {
+/* .details-logo img {
   width: 300px;
   height: auto;
   border-radius: 8px;
-}
+} */
 
 .details-text {
   max-width: 600px;

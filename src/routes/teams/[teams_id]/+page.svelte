@@ -1,23 +1,23 @@
 <script>
     let { data } = $props();
-    let movies = data.movies;
-    function confirmDelete(movie) {
+    let teams = data.movies;
+/*     function confirmDelete(movie) {
         if (!confirm("Are you sure you want to delete this movie?")) {
             movie.preventDefault(); // cancel form submission
         }
-    }
+    } */
 </script>
 
 <div class="details">
-    <a href="/movies">Back</a>
-    <h1>Movies Details</h1>
+    <a href="/teams">Back</a>
+    <h1>Teams Details</h1>
 
-    <div class="details-poster">
-        <img src={data.poster} alt={data.title} />
+    <div class="details-logo">
+        <img src={data.logo} alt={data.team_name} />
 
         <div class="details-text">
             <p>{data._id}</p>
-            <h2>{data.title}</h2>
+            <h2>{data.team_name}</h2>
             <p>Cast:</p>
             <ul>
                 {#each data.actors as actor}
@@ -27,11 +27,11 @@
             <a href={"/movies/" + data._id + "/update"} class="btn btn-primary"
                 >Update Movie</a
             >
-            <form method="POST" action="?/delete" on:submit={confirmDelete}>
+<!--             <form method="POST" action="?/delete" on:submit={confirmDelete}>
                 <button type="submit" name="delete" class="btn btn-danger"
                     >Delete Movie</button
                 >
-            </form>
+            </form> -->
         </div>
     </div>
 </div>
