@@ -1,0 +1,57 @@
+[
+    {
+    "player_id": 146,
+    "first_name": "Keyonte",
+    "last_name": "George",
+    "team_id": 30,
+    "position": "Point Guard",
+    "trikotnummer": 3,
+    "geburtsdatum": "2003-11-08",
+    "größe": 1.93,
+    "draft_jahr": 2023
+  },
+  {
+    "player_id": 147,
+    "first_name": "Jordan",
+    "last_name": "Clarkson",
+    "team_id": 30,
+    "position": "Shooting Guard",
+    "trikotnummer": 0,
+    "geburtsdatum": "1992-06-07",
+    "größe": 1.93,
+    "draft_jahr": 2014
+  },
+  {
+    "player_id": 148,
+    "first_name": "Lauri",
+    "last_name": "Markkanen",
+    "team_id": 30,
+    "position": "Small Forward",
+    "trikotnummer": 23,
+    "geburtsdatum": "1997-05-22",
+    "größe": 2.13,
+    "draft_jahr": 2017
+  },
+  {
+    "player_id": 149,
+    "first_name": "John",
+    "last_name": "Collins",
+    "team_id": 30,
+    "position": "Power Forward",
+    "trikotnummer": 20,
+    "geburtsdatum": "1997-09-23",
+    "größe": 2.06,
+    "draft_jahr": 2017
+  },
+  {
+    "player_id": 150,
+    "first_name": "Walker",
+    "last_name": "Kessler",
+    "team_id": 30,
+    "position": "Center",
+    "trikotnummer": 24,
+    "geburtsdatum": "2001-07-26",
+    "größe": 2.13,
+    "draft_jahr": 2022
+  }
+]
