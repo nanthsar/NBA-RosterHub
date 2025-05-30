@@ -26,11 +26,7 @@
     margin-bottom: 0rem;
   }
 
-  .disclaimer {
-    display: block;
-    text-align: center;
-    color: #666;
-    margin-top: 0rem;
-    margin-bottom: 2rem;
-  }
+strong {
+  color: #0C2340;
+}
 </style>

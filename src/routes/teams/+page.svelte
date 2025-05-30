@@ -1,31 +1,37 @@
 <script>
-let { data } = $props()
+    let { data } = $props();
 
-let movies = data.movies
-
+    let teams = data.teams;
 </script>
 
-<h3>
-    Daten sind mit ChatGPT generiert und Bilder aus dem Internet heruntergeladen
-    worden.
-</h3>
-
+<br />
 <div class="adding">
-<a href="/movies/create">+add Movie</a>
-<br>
-<br>
+    <a href="/teams/create">+add Team</a>
+    <br />
+    <br />
 </div>
-<div class="movie-grid">
-    {#each movies as movie}
-        <div class="movie-item">
-            <img src={movie.poster} alt="" />
-            <div class="movie-information">
-                <a href={"/movies/" + movie._id}>
-                <div><b>{movie.title}</b></div>
+
+<div class="team-grid">
+    {#each teams as team}
+        <div class="team-item">
+            <a href={"/teams/" + team._id} class="team-link">
+            <img src={team.logo} alt={team.team_name} class="team-logo" />
+        
+            </a>
+            <div class="team-information">
+                <a href={"/teams/" + team._id} class="team-link">
+                    <div><b>{team.team_name}</b></div>
                 </a>
-                <div>Year: {movie.year}</div>
-                <div>Length: {movie.length}</div>
+                <div>City: {team.city}</div>
+                <div>{team.conference}</div>
             </div>
         </div>
     {/each}
 </div>
+
+<br />
+<small class="disclaimer">
+    Rechtlicher Hinweis: Die Marke NBA und die Logos gehören zur offiziellen
+    Lizenz der
+    <a href="https://www.nba.com">NBA</a>.
+</small>
