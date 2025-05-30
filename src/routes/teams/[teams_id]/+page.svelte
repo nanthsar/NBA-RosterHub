@@ -1,7 +1,7 @@
 <script>
     let { data } = $props();
-    let teams = data.movies;
-/*     function confirmDelete(movie) {
+    let teams = $state(data);
+    /*     function confirmDelete(movie) {
         if (!confirm("Are you sure you want to delete this movie?")) {
             movie.preventDefault(); // cancel form submission
         }
@@ -10,24 +10,37 @@
 
 <div class="details">
     <a href="/teams">Back</a>
-    <h1>Teams Details</h1>
 
     <div class="details-logo">
-        <img src={data.logo} alt={data.team_name} />
+        <img src={data.logo} alt={data.team_name} class="logo-size" />
 
         <div class="details-text">
-            <p>{data._id}</p>
-            <h2>{data.team_name}</h2>
-            <p>Cast:</p>
-            <ul>
-                {#each data.actors as actor}
-                    <li>{actor}</li>
+            <h2><strong>{data.team_name}</strong></h2>
+            <br />
+            <p><strong>City:</strong> {data.city}</p>
+            <p><strong>Conference:</strong> {data.conference}</p>
+            <p><strong>Coach:</strong> {data.coach}</p>
+            <p>
+                <strong>
+                    <a href={"/player" + data._id}>
+                        Starting Five der
+                        {data.team_name} 2024
+                    </a>
+                </strong>
+            </p>
+            <p><strong>Description:</strong> {data.description}</p>
+            <p><strong>NBA Championships:</strong></p>
+            <ul class="champions-list">
+                {#each data.titel as titel}
+                    <li>{titel}</li>
                 {/each}
             </ul>
-            <a href={"/movies/" + data._id + "/update"} class="btn btn-primary"
-                >Update Movie</a
+
+            <a href={"/teams/" + data._id + "/update"} class="btn btn-primary"
+                >Update Team</a
             >
-<!--             <form method="POST" action="?/delete" on:submit={confirmDelete}>
+
+            <!--             <form method="POST" action="?/delete" on:submit={confirmDelete}>
                 <button type="submit" name="delete" class="btn btn-danger"
                     >Delete Movie</button
                 >

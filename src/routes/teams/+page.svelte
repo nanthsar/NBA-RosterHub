@@ -1,4 +1,4 @@
-<script>
+<script >
     let { data } = $props();
     let teams = data.teams;
 </script>
