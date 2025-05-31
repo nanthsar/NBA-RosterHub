@@ -1,11 +1,11 @@
 <script>
     let { data } = $props();
     let teams = $state(data);
-    /*     function confirmDelete(movie) {
-        if (!confirm("Are you sure you want to delete this movie?")) {
-            movie.preventDefault(); // cancel form submission
-        }
-    } */
+
+    function getPlayersTeam(team_id) {
+        const team = teams.find((t) => t.team_id === team_id);
+        return team.team_name;
+    }
 </script>
 
 <div class="details">
@@ -39,12 +39,6 @@
             <a href={"/teams/" + data._id + "/update"} class="btn custom-btn"
                 >Update Team</a
             >
-
-            <!--             <form method="POST" action="?/delete" on:submit={confirmDelete}>
-                <button type="submit" name="delete" class="btn btn-danger"
-                    >Delete Movie</button
-                >
-            </form> -->
         </div>
     </div>
 </div>

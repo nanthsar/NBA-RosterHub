@@ -123,7 +123,13 @@ a {
   color: white;
 }
 
-.custom-btn {
+.custom-btn{
+  background-color: #0C2340;
+  color: white;
+}
+
+/* Aufgrund von Bootratrap verschwindet die Farbe des Buttons Update und mit dem behalte ich es: */
+.custom-btn:hover {
   background-color: #0C2340;
   color: white;
 }

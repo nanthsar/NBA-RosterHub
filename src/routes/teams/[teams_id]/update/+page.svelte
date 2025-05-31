@@ -21,7 +21,7 @@
 
     <div class="mb-3">
       <label class="form-label"for="conference">Conference</label>
-      <input value={data.conference} name="conference" class="form-control" type="text" readonly />
+      <input value={data.conference} name="conference" class="form-control" type="text" />
     </div>
 
     <div class="mb-3">

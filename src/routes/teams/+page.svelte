@@ -1,17 +1,23 @@
-<script >
+<script>
     let { data } = $props();
     let teams = data.teams;
+    let players = data.players;
+
+    function getPlayersByTeam(team_id) {
+        const result = players.filter((p) => p.team_id === team_id);
+        return result;
+    }
 </script>
-<br>
+
+<br />
 <h1>NBA Teams</h1>
-<br>
+<br />
 
 <div class="team-grid">
     {#each teams as team}
         <div class="team-item">
             <a href={"/teams/" + team._id} class="team-link">
-            <img src={team.logo} alt={team.team_name} class="team-logo" />
-        
+                <img src={team.logo} alt={team.team_name} class="team-logo" />
             </a>
             <div class="team-information">
                 <a href={"/teams/" + team._id} class="team-link">
@@ -19,6 +25,11 @@
                 </a>
                 <div>City: {team.city}</div>
                 <div>{team.conference}</div>
+
+                <div class="team-players">
+                    <strong>Players:</strong>
+                    {getPlayersByTeam(team.team_id).length}
+                </div>
             </div>
         </div>
     {/each}
