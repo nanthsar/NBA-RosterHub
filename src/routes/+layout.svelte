@@ -25,7 +25,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/teams">Teams</a>
+          <a class="nav-link active" aria-current="page" href="/teams">NBA Teams</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/players">Players</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/teams">Draft</a>

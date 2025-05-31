@@ -1,9 +1,9 @@
-<h1>Willkommen bei <strong>NBA RosterHub 🏀</strong></h1>
+<h1>Welcome to <strong>NBA RosterHub 🏀</strong></h1>
 
 <h3>
-  NBA RosterHub – der smarte
-  <a href="/teams">Kader-Manager</a>
-  für die Basketballwelt!
+  NBA RosterHub – the smart
+  <a href="/teams">Team Management System</a>
+  for the basketball world!
 </h3>
 
 <img src="/images/ChatGPT_NBA_Banner.png" alt="" class="banner" />

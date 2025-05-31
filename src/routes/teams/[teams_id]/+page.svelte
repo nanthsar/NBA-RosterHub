@@ -36,7 +36,7 @@
                 {/each}
             </ul>
 
-            <a href={"/teams/" + data._id + "/update"} class="btn btn-primary"
+            <a href={"/teams/" + data._id + "/update"} class="btn custom-btn"
                 >Update Team</a
             >
 

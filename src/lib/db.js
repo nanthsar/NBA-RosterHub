@@ -53,6 +53,28 @@ async function getTeam(id) {
   return team;
 }
 
+// update team
+// returns: id of the updated team or null, if team could not be updated
+async function updateTeam(team) {
+  try {
+    let id = team._id;
+    delete team._id; // _id darf nicht direkt aktualisiert werden
+    const collection = db.collection("nba_teams");
+    const query = { _id: new ObjectId(String(id)) };
+    const result = await collection.updateOne(query, { $set: team });
+
+    if (result.matchedCount === 0) {
+      console.log("No team with id " + id);
+    } else {
+      console.log("Team with id " + id + " has been updated.");
+      return id;
+    }
+  } catch (error) {
+    console.error("UpdateTeam error:", error.message);
+  }
+  return null;
+}
+
 // Get all players
 async function getPlayers() {
   let players = [];
@@ -176,6 +198,7 @@ async function getPlayersTeam(teamId) {
 export default {
   getTeams,
   getTeam,
+  updateTeam,
   getPlayers,
   getPlayer,
   createPlayer,

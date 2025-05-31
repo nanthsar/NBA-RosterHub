@@ -3,20 +3,23 @@ import db from "$lib/db.js";
 
 
 export async function load({ params }) {
-  const movie = await db.getMovie(params.movies_id);
-  return  movie;
+  const team = await db.getTeam(params.teams_id);
+  return team;
 }
 
 export const actions = {
-  update: async ({request}) =>   {
+  update: async ({ request }) => {
     const data = await request.formData();
-    let movie = {
-        _id: data.get("id"),
-        title: data.get("title"),
-        year: data.get("year"),
-        length: data.get("length")
+    let team = {
+      _id: data.get("id"),
+      team_name: data.get("team_name"),
+      city: data.get("city"),
+      conference: data.get("conference"),
+      coach: data.get("coach"),
+      description: data.get("description"),
+      logo: data.get("logo"),
     }
-    await db.updateMovie(movie);
-    return { success: true} 
+    await db.updateTeam(team);
+    return { success: true }
   }
-  }
+}
