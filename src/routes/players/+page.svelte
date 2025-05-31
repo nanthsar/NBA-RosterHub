@@ -1,15 +1,21 @@
 <script>
-    let { data } = $props();
-    let players = data.players;
+  let { data } = $props();
+  let players = data.players;
+  let teams = data.teams;
+
+  function getPlayersTeam(team_id) {
+    const team = teams.find((t) => t.team_id === team_id);
+    return team.team_name
+  }
 </script>
 
-<br>
+<br />
 <h1>NBA Player</h1>
 
 <div class="adding">
-    <a href="/players/create">+Add a new Player</a>
-    <br />
-    <br />
+  <a href="/players/create">+Add a new Player</a>
+  <br />
+  <br />
 </div>
 
 <div class="container">
@@ -22,6 +28,7 @@
               <h5 class="card-title">{player.first_name} {player.last_name}</h5>
             </a>
             <p class="card-text">Position: {player.position}</p>
+            <p class="card-text">Team: {getPlayersTeam(player.team_id)}</p>
           </div>
         </div>
       </div>
@@ -29,9 +36,8 @@
   </div>
 </div>
 
-<br />
 <small class="disclaimer">
-    Rechtlicher Hinweis: Die Marke NBA und die Logos gehören zur offiziellen
-    Lizenz der
-    <a href="https://www.nba.com">NBA</a>.
+  Rechtlicher Hinweis: Die Marke NBA und die Logos gehören zur offiziellen
+  Lizenz der
+  <a href="https://www.nba.com">NBA</a>.
 </small>

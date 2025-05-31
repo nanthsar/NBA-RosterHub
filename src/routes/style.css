@@ -131,3 +131,8 @@ a {
 h1 {
   text-align: center;
 }
+
+.img_position {
+  width: 50%;
+  height: auto;
+}
