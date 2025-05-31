@@ -10,7 +10,7 @@
     <input value={data._id} name="id" class="form-control" type="hidden" />
 
     <div class="mb-3">
-      <label class="form-label">Team Name</label>
+      <label class="form-label" for="team_name">Team Name</label>
       <input
         value={data.team_name}
         name="team_name"
@@ -20,12 +20,12 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">City</label>
+      <label class="form-label"for="city">City</label>
       <input value={data.city} name="city" class="form-control" type="text" />
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Conference</label>
+      <label class="form-label"for="conference">Conference</label>
       <input
         value={data.conference}
         name="conference"
@@ -35,17 +35,17 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Coach</label>
+      <label class="form-label"for="coach">Coach</label>
       <input value={data.coach} name="coach" class="form-control" type="text" />
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Logo (Pfad zur Bilddatei)</label>
+      <label class="form-label"for="logo">Logo (Pfad zur Bilddatei)</label>
       <input value={data.logo} name="logo" class="form-control" type="text" />
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Description</label>
+      <label class="form-label"for="description">Description</label>
       <textarea name="description" class="form-control"
       rows="10">{data.description}
       </textarea>

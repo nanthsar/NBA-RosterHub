@@ -1,7 +1,6 @@
 <script>
     let { data, teamdata } = $props();
     let player = $state(data);
-    let teams = $state(teamdata);
 
 
     function getPlayersTeam(team_id) {
@@ -53,7 +52,7 @@
 
         <div class="d-flex gap-2">
             <!-- Dank dieser Klasse sind Update und Delete Buttons nebeneinander. -->
-            <a href={"/players/" + data._id + "/update"} class="btn custom-btn">
+            <a href={"/players/" + data._id + "/updateplayer"} class="btn custom-btn">
                 Update Player
             </a>
 
