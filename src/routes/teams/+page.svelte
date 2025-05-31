@@ -2,13 +2,9 @@
     let { data } = $props();
     let teams = data.teams;
 </script>
-
-<br />
-<div class="adding">
-    <a href="/teams/create">+Add a new team</a>
-    <br />
-    <br />
-</div>
+<br>
+<h1>NBA Teams</h1>
+<br>
 
 <div class="team-grid">
     {#each teams as team}
