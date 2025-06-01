@@ -6,8 +6,9 @@ body {
 }
 
 .team-logo {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
   display: block;
   margin-bottom: 0;
   background-color: white
@@ -20,9 +21,18 @@ body {
   vertical-align: middle;
 }
 
+.nba-logo-inline {
+  width: 100%;
+  max-width: 40px;
+  height: auto;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
 .logo-size {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .details-logo {
@@ -32,29 +42,20 @@ body {
   margin-top: 1rem;
 }
 
-.banner {
-  width: 55%;
-  height: auto;
-  display: block;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
 
 .champions-list{
   columns: 2;
 }
 
-table,
-th,
-td {
-  border: 1px solid white;
-}
 
 .team-grid {
   border-radius: 5px;
   border-color: aliceblue;
   padding: 0 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 
@@ -82,13 +83,6 @@ h3 {
   margin-top: 0;
 }
 
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
 .adding {
   text-align: center;
 }
@@ -98,11 +92,6 @@ h3 {
   padding: 0 10rem;
 }
 
-/* .details-logo img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-} */
 
 .details-text {
   max-width: 600px;

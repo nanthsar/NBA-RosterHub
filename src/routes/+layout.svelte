@@ -1,5 +1,6 @@
 <script>
   let { children } = $props();
+  import { page } from "$app/stores";
   import "./style.css";
 </script>
 
@@ -25,13 +26,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/teams">NBA Teams</a>
+          <a class="nav-link" href="/teams"class:active={$page.url.pathname.startsWith("/teams")}>NBA Teams</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/players">Players</a>
+          <a class="nav-link" href="/players"class:active={$page.url.pathname.startsWith('/players')}>Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/draft">Draft Lottery</a>
+          <a class="nav-link" href="/draft" class:active={$page.url.pathname.startsWith('/draft')}>Draft Lottery</a>
         </li>
       </ul>
     </div>
@@ -40,11 +41,11 @@
 
 {@render children()}
 
-<br>
+<br />
 <footer style="text-align: center; margin-top: 2rem;">
   <small class="disclaimer">
     Legal notice: The NBA brand and logos are officially licensed by the
     <a href="https://www.nba.com" target="_blank">NBA</a>.
   </small>
 </footer>
-<br>
+<br />
