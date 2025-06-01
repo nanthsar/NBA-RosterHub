@@ -11,6 +11,7 @@
 <style>
   h1,
   h3 {
+    text-align: center;
     margin-top: 2rem;
     margin-bottom: 0rem;
   }
@@ -21,7 +22,6 @@
   display: block;
   margin: 2rem auto;
   border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 </style>
