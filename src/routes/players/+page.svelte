@@ -40,9 +40,3 @@
     {/each}
   </div>
 </div>
-
-<small class="disclaimer">
-  Rechtlicher Hinweis: Die Marke NBA und die Logos gehören zur offiziellen
-  Lizenz der
-  <a href="https://www.nba.com">NBA</a>.
-</small>

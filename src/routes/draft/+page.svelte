@@ -1,116 +1,90 @@
 <script>
-	const teamsWithOdds = [
-		{ name: "Utah Jazz", odds: 14 },
-		{ name: "Washington Wizards", odds: 14 },
-		{ name: "Charlotte Hornets", odds: 14 },
-		{ name: "New Orleans Pelicans", odds: 12.5 },
-		{ name: "Philadelphia 76ers", odds: 10.5 },
-		{ name: "Brooklyn Nets", odds: 9 },
-		{ name: "Toronto Raptors", odds: 7.5 },
-		{ name: "San Antonio Spurs", odds: 6 },
-		{ name: "Houston Rockets", odds: 3.8 },
-		{ name: "Portland Trail Blazers", odds: 3.7 },
-		{ name: "Dallas Mavericks", odds: 1.8 },
-		{ name: "Chicago Bulls", odds: 1.7 },
-		{ name: "Sacramento", odds: 0.8 },
-		{ name: "Atlanta Hawks", odds: 0.7 }
-	];
+    let { data } = $props();
+    const teams = data.teams;
 
-	let draftOrder = [];
-	let topPickLogo = null;
+    const teamsWithOdds = [
+        { team_id: 30, odds: 14 },
+        { team_id: 15, odds: 14 },
+        { team_id: 4, odds: 14 },
+        { team_id: 24, odds: 12.5 },
+        { team_id: 13, odds: 10.5 },
+        { team_id: 3, odds: 9 },
+        { team_id: 14, odds: 7.5 },
+        { team_id: 29, odds: 6 },
+        { team_id: 19, odds: 3.8 },
+        { team_id: 27, odds: 3.7 },
+        { team_id: 16, odds: 1.8 },
+        { team_id: 5, odds: 1.7 },
+        { team_id: 28, odds: 0.8 },
+        { team_id: 1, odds: 0.7 },
+    ];
 
-	function runFullDraftLottery() {
-		let pool = [];
-		teamsWithOdds.forEach(team => {
-			const weight = Math.round(team.odds * 10);
-			for (let i = 0; i < weight; i++) {
-				pool.push(team.name);
-			}
-		});
+    let draftOrder = $state([]);
 
-		const seen = new Set();
-		draftOrder = [];
+    function runDraftLottery() {
+        let pool = [];
 
-		while (seen.size < teamsWithOdds.length && pool.length > 0) {
-			const index = Math.floor(Math.random() * pool.length);
-			const selected = pool[index];
+        teamsWithOdds.forEach(({ team_id, odds }) => {
+            const tickets = Math.round(odds * 10);
+            for (let i = 0; i < tickets; i++) {
+                pool.push(team_id);
+            }
+        });
 
-			if (!seen.has(selected)) {
-				seen.add(selected);
-				draftOrder.push(selected);
-			}
-			pool = pool.filter((t) => t !== selected);
-		}
+        const seen = new Set();
+        draftOrder = [];
 
-		if (draftOrder.length > 0) {
-			const firstTeam = draftOrder[0].toLowerCase().replaceAll(" ", "_");
-			topPickLogo = `/images/${firstTeam}.jpg`;
-		}
-	}
+        while (seen.size < teamsWithOdds.length && pool.length > 0) {
+            const index = Math.floor(Math.random() * pool.length);
+            const selectedId = pool[index];
+            if (!seen.has(selectedId)) {
+                seen.add(selectedId);
+                draftOrder.push(selectedId);
+            }
+            pool = pool.filter((id) => id !== selectedId);
+        }
+    }
+
+    function getTeamById(id) {
+        return teams.find((t) => t.team_id === id);
+    }
 </script>
 
-<div class="lottery">
-	<h1>NBA Draft Lottery 2025</h1>
-	<p>Simulate the complete weighted lottery by NBA RosterHub!</p>
+<div class="container mt-5">
+    <h1>NBA Draft Lottery 2025</h1>
+    <p class="text-center">
+        Simulate the official draft order based on <a
+            href="https://www.nba.com/jazz/news/2025-nba-draft-lottery-what-you-need-to-know" target="_blank" 
+            >weighted team odds
+        </a>.
+    </p>
 
-	<button class="btn custom-btn" on:click={runFullDraftLottery}>Simulate Draft</button>
+    <div class="text-center my-4">
+        <button class="btn custom-btn" onclick={runDraftLottery}
+            >Run Lottery</button
+        >
+    </div>
 
-	{#if draftOrder.length}
-		{#if topPickLogo}
-			<div class="mt-4">
-				<h3>1st Pick: {draftOrder[0]}</h3>
-				<img src={topPickLogo} alt="1st Pick Logo" class="top-pick-logo" />
-			</div>
-		{/if}
-
-		<ol class="draft-results mt-4">
-			{#each draftOrder as team, i}
-				<ul><strong>Pick {i + 1}:</strong> {team}</ul>
-			{/each}
-		</ol>
-	{/if}
+    {#if draftOrder.length > 0}
+        <ul class="list-group mx-auto" style="max-width: 600px;">
+            {#each draftOrder as id, i}
+                {#if getTeamById(id)}
+                    <li class="list-group-item d-flex align-items-center gap-3">
+                        <!-- Alles nebeneinander, linksbündig -->
+                        <strong style="width: 80px; display: inline-block;"
+                            >Pick {i + 1}:</strong
+                        >
+                        <img
+                            src={getTeamById(id).logo}
+                            alt={getTeamById(id).team_name}
+                            width="50"
+                        />
+                        <span>{getTeamById(id).team_name}</span>
+                    </li>
+                {/if}
+            {/each}
+        </ul>
+    {/if}
 </div>
-
-<style>
-	.lottery {
-		max-width: 700px;
-		margin: 3rem auto;
-		padding: 2rem;
-		text-align: center;
-		background: #f9f9f9;
-		border-radius: 12px;
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-	}
-
-	h1 {
-		color: #0C2340;
-		margin-bottom: 1rem;
-	}
-
-	button.custom-btn {
-		background-color: #0C2340;
-		color: white;
-		padding: 0.75rem 1.5rem;
-		border: none;
-		border-radius: 8px;
-		font-size: 1rem;
-		cursor: pointer;
-		margin-top: 1rem;
-	}
-
-	.draft-results {
-		margin-top: 2rem;
-		text-align: left;
-		list-style-position: inside;
-		font-size: 1.1rem;
-	}
-
-	.top-pick-logo {
-		width: 120px;
-		height: auto;
-		margin-top: 1rem;
-		border-radius: 10px;
-		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-	}
-
-</style>
+<br />
+<br />

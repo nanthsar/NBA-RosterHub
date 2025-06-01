@@ -39,3 +39,12 @@
 </nav>
 
 {@render children()}
+
+<br>
+<footer style="text-align: center; margin-top: 2rem;">
+  <small class="disclaimer">
+    Legal notice: The NBA brand and logos are officially licensed by the
+    <a href="https://www.nba.com" target="_blank">NBA</a>.
+  </small>
+</footer>
+<br>
