@@ -16,6 +16,8 @@ body {
 .nba-logo {
   height: 60px;
   width: auto;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 .logo-size {

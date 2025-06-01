@@ -2,6 +2,10 @@
     let { data } = $props();
     let team = data.team;
     let players = data.players;
+
+    function getPlayersByTeam(team_id) {
+        return players.filter((p) => p.team_id === team_id);
+    }
 </script>
 
 <div class="details">
@@ -19,7 +23,7 @@
             <p><strong>Line up {team.team_name}:</strong></p>
             <div class="team-players mt-4">
                 <ul>
-                    {#each players as player}
+                    {#each getPlayersByTeam(team.team_id) as player}
                         <li>
                             {player.first_name}
                             {player.last_name} — {player.position}

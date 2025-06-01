@@ -177,20 +177,6 @@ async function deletePlayer(id) {
   return null;
 }
 
-async function getPlayersByTeamId(team_id) {
-  let players = [];
-  try {
-    const collection = db.collection("nba_players");
-    const query = { team_id: Number(team_id) }; // sicherstellen, dass es eine Zahl ist
-    players = await collection.find(query).toArray();
-    players.forEach((player) => {
-      player._id = player._id.toString();
-    });
-  } catch (error) {
-    console.error("getPlayersByTeamId error:", error.message);
-  }
-  return players;
-}
 
 // export all functions so that they can be used in other files
 export default {
@@ -201,6 +187,5 @@ export default {
   getPlayer,
   createPlayer,
   updatePlayer,
-  deletePlayer,
-  getPlayersByTeamId
+  deletePlayer
 };
