@@ -1,5 +1,10 @@
 import db from "$lib/db.js";
 
+export async function load() {
+    const teams = await db.getTeams();
+    return {teams};
+}
+
 export const actions = {
     create: async ({ request }) => {
 
@@ -16,7 +21,6 @@ export const actions = {
             draft_jahr: Number(data.get("draft_jahr"))
         };
 
-        /* Hier Aufruf Create von db.js */
         db.createPlayer(player)
         return { success: true }
 

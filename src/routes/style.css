@@ -7,11 +7,12 @@ body {
 
 .team-logo {
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
   height: auto;
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
   display: block;
-  margin-bottom: 0;
-  background-color: white
 }
 
 .nba-logo {
