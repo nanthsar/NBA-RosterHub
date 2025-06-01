@@ -51,7 +51,7 @@
 
 <div class="lottery">
 	<h1>NBA Draft Lottery 2025</h1>
-	<p>Simulate the complete weighted NBA RosterHub lottery!</p>
+	<p>Simulate the complete weighted lottery by NBA RosterHub!</p>
 
 	<button class="btn custom-btn" on:click={runFullDraftLottery}>Simulate Draft</button>
 
