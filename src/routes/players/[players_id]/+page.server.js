@@ -7,9 +7,6 @@ export async function load({ params }) {
   return { player, teams };
 }
 
-/* Params Erklärung: params steht für Parameter aus der URL, also die dynamischen Teile deiner Route – zum Beispiel die:id oder[teams_id] in einer Datei oder Ordnerstruktur
- */
-
 export const actions = {
   delete: async ({ params }) => {
     const id = params.players_id;

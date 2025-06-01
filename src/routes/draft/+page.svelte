@@ -70,7 +70,6 @@
             {#each draftOrder as id, i}
                 {#if getTeamById(id)}
                     <li class="list-group-item d-flex align-items-center gap-3">
-                        <!-- Alles nebeneinander, linksbündig -->
                         <strong style="width: 80px; display: inline-block;"
                             >Pick {i + 1}:</strong
                         >

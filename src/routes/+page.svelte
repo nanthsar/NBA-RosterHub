@@ -7,14 +7,10 @@
 </h3>
 
 <img src="/images/ChatGPT_NBA_Banner.png" alt="" class="banner" />
-<!-- Hier habe ich Klasse Banner gemacht, da ich eine bewusste Grösse für den Banner im Style.css machen möchte
-  und nicht eine Zerntrale Grösse wie alle Bilder -->
-
 
 <style>
   h1,
   h3 {
-    text-align: center;
     margin-top: 2rem;
     margin-bottom: 0rem;
   }

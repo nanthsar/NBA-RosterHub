@@ -52,7 +52,6 @@
         <br />
         <br />
         <div class="d-flex gap-2">
-            <!-- Dank dieser Klasse sind Update und Delete Buttons nebeneinander. -->
             <a
                 href={"/players/" + player._id + "/updateplayer"}
                 class="btn custom-btn"
