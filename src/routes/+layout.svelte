@@ -31,7 +31,7 @@
           <a class="nav-link active" aria-current="page" href="/players">Players</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/teams">Draft</a>
+          <a class="nav-link active" aria-current="page" href="/draft">Draft Lottery</a>
         </li>
       </ul>
     </div>

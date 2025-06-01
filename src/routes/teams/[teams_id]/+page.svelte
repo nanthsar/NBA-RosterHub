@@ -1,11 +1,6 @@
 <script>
     let { data } = $props();
     let teams = $state(data);
-
-    function getPlayersTeam(team_id) {
-        const team = teams.find((t) => t.team_id === team_id);
-        return team.team_name;
-    }
 </script>
 
 <div class="details">
@@ -20,14 +15,7 @@
             <p><strong>City:</strong> {data.city}</p>
             <p><strong>Conference:</strong> {data.conference}</p>
             <p><strong>Coach:</strong> {data.coach}</p>
-            <p>
-                <strong>
-                    <a href={"/player" + data._id}>
-                        Starting Five der
-                        {data.team_name} 2024
-                    </a>
-                </strong>
-            </p>
+            <p><strong>Lineup {data.team_name} 2024:</strong></p>
             <p><strong>Description:</strong> {data.description}</p>
             <p><strong>NBA Championships:</strong></p>
             <ul class="champions-list">

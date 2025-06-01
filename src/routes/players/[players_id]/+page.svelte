@@ -38,18 +38,14 @@
     <br />
     <div class="details-text">
         <h2><strong>{data.first_name} {data.last_name}</strong></h2>
-        <br />
-        <p><strong>Position:</strong> {data.position}</p>
-        <img
-            src={getPositionImage(data.position)} alt="" class="img_position"
-        />
-        <br />
-        <br />
         <p><strong>Date of Birth:</strong> {data.geburtsdatum}</p>
-        <p><strong>Height:</strong> {data.größe}</p>
+        <p><strong>Height:</strong> {data.größe} m</p>
         <p><strong>Jersey Nr.:</strong> {data.trikotnummer}</p>
         <p><strong>Draft Year:</strong> {data.draft_jahr}</p>
-
+        <p><strong>Position:</strong> {data.position}</p>
+        <img src={getPositionImage(data.position)} alt="" class="img_position"/>
+            <br>
+            <br>
         <div class="d-flex gap-2">
             <!-- Dank dieser Klasse sind Update und Delete Buttons nebeneinander. -->
             <a href={"/players/" + data._id + "/updateplayer"} class="btn custom-btn">

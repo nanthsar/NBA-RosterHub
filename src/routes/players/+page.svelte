@@ -7,6 +7,11 @@
     const team = teams.find((t) => t.team_id === team_id);
     return team.team_name
   }
+
+    function getPlayersTeamlogo(team_id) {
+    const team = teams.find((t) => t.team_id === team_id);
+    return team.logo
+  }
 </script>
 
 <br />
@@ -28,7 +33,7 @@
               <h5 class="card-title">{player.first_name} {player.last_name}</h5>
             </a>
             <p class="card-text">Position: {player.position}</p>
-            <p class="card-text">Team: {getPlayersTeam(player.team_id)}</p>
+            <p class="card-text">Team: {getPlayersTeam(player.team_id)} <img src={getPlayersTeamlogo(player.team_id)} alt="" style="width: 45px; height: auto; float: right;" /></p>
           </div>
         </div>
       </div>

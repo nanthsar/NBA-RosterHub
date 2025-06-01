@@ -26,10 +26,7 @@
                 <div>City: {team.city}</div>
                 <div>{team.conference}</div>
 
-                <div class="team-players">
-                    <strong>Players:</strong>
-                    {getPlayersByTeam(team.team_id).length}
-                </div>
+                <div class="team-players">Players: {getPlayersByTeam(team.team_id).length}</div>
             </div>
         </div>
     {/each}
