@@ -97,7 +97,7 @@
       <input name="draft_jahr" class="form-control" type="number" required />
     </div>
 
-    <button type="submit" class="btn btn-primary">Add Player</button>
+    <button type="submit" class="btn custom-btn">Add Player</button>
   </form>
 
   <br />
