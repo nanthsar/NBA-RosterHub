@@ -4,7 +4,10 @@ import db from "$lib/db.js";
 
 export async function load({ params }) {
   const player = await db.getPlayer(params.players_id);
-  return player;
+  const teams = await db.getTeams();
+  return {
+    player, 
+    teams};
 }
 
 export const actions = {

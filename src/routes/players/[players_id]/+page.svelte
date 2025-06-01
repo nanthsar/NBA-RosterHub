@@ -1,5 +1,5 @@
 <script>
-    let { data, teamdata } = $props();
+    let { data } = $props();
     let player = $state(data);
 
 
