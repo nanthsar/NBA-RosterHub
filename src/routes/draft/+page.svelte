@@ -21,7 +21,7 @@
 
     let draftOrder = $state([]);
 
-    function runDraftLottery() {
+    function runDraft() {
         let pool = [];
 
         teamsWithOdds.forEach(({ team_id, odds }) => {
@@ -60,7 +60,7 @@
     </p>
 
     <div class="text-center my-4">
-        <button class="btn custom-btn" onclick={runDraftLottery}
+        <button class="btn custom-btn" onclick={runDraft}
             >Run Lottery</button
         >
     </div>

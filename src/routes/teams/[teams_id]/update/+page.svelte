@@ -30,7 +30,7 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label"for="logo">Logo (Pfad zur Bilddatei)</label>
+      <label class="form-label"for="logo">Logo (path to image file)</label>
       <input value={data.logo} name="logo" class="form-control" type="text" />
     </div>
 

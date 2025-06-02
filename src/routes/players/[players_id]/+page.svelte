@@ -3,7 +3,7 @@
     let player = data.player;
     let teams = data.teams;
 
-    function getTeamByPlayer(team_id) {
+    function getPlayersTeam(team_id) {
         return teams.find((t) => t.team_id === team_id);
     }
 
@@ -36,9 +36,9 @@
     <br />
     <br />
     <div class="details-text">
-        <h2><strong>{player.first_name} {player.last_name}</strong><img src="{getTeamByPlayer(player.team_id).logo}" alt="" class="nba-logo" /></h2>
+        <h2><strong>{player.first_name} {player.last_name}</strong><img src="{getPlayersTeam(player.team_id).logo}" alt="" class="nba-logo" /></h2>
         <br>
-        <p><strong>Team:</strong> {getTeamByPlayer(player.team_id).team_name}</p>
+        <p><strong>Team:</strong> {getPlayersTeam(player.team_id).team_name}</p>
         <p><strong>Date of Birth:</strong> {player.geburtsdatum}</p>
         <p><strong>Height:</strong> {player.größe} m</p>
         <p><strong>Jersey Nr.:</strong> {player.trikotnummer}</p>
